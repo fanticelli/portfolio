@@ -1,0 +1,148 @@
+/* Importação das fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #363062;
+    --cor-secundaria: #F5E8C7;
+    --cor-terciaria: #818FB4;
+    --cor-hover: #435585;
+
+    --font-primaria: 'Krona One', sans-serif;
+    --font-secundaria: 'Montsserat', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_link{
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.tituloDestaque {
+    color: var(--cor-terciaria);
+}
+
+/* layout flexivel | alinhando verticalmente os itens ao centro | distribuindo espaçamento igual entre os itens */
+.apresentacao{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5% 15%;
+gap: 82px;
+}
+
+/* Tamanho do conteudo*/
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Tamanho da fonte do titulo | Estilo de fonte do titulo*/
+.apresentacao_titulo{
+    font-size: 2.25rem;
+    font-family: var(--font-primaria);
+}
+
+/* Tamanho da fonte do paragrafo*/
+.apresentacao_paragrafo{
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+}
+
+/* Alinhando os botões e colocando espaçamento*/
+.apresentacao_link {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   gap: 32px;
+}
+
+.apresentacao_subtitulo{
+    font-family: var(--font-primaria);
+    font-weight: 400;    
+    font-size: 1.5rem;
+}
+
+/* Colocando cor de fundo | Modificando o tamanho dos botões | Alinhando a fonte com os botões | Modificando cor, tamanho e o tipo de fonte | retirando a decoração dos links*/
+.apresentacao_link_botao{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    padding: 21.5px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.apresentacao_link_botao:hover{
+    background-color: var(--cor-hover);
+}
+
+.apresentacao_imagem{
+    width: 50%;
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 60px;
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+
+.apresentacao_paragrafo a{
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho_menu{
+        justify-content: center;
+    }
+    
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    
+    .apresentacao_conteudo{
+        width: auto;
+    }
+}
